@@ -15,7 +15,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 const client = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create();
-client.defaults.baseURL = "http://velm:8080";
+client.defaults.baseURL = "http://43.200.215.234";
 //'http://velm:8080'
 //'http://10.10.123.84:8080'
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (client);
