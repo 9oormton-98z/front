@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/": "pages/index.html",
-  "/main/[id]": "pages/main/[id].html",
-  "/main": "pages/main.html",
   "/mybook": "pages/mybook.html",
+  "/main": "pages/main.html",
+  "/main/[id]": "pages/main/[id].html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }

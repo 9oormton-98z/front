@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { XMarkIcon } from '@heroicons/react/20/solid';
+import { motion } from 'framer-motion';
 
 interface StampViewModalProps {
   imageURL: string;
@@ -40,7 +41,13 @@ export default function StampViewModal({ title, description, imageURL, closeModa
                 <Dialog.Panel className="relative flex w-full max-w-md transform flex-col items-center overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <XMarkIcon className="absolute right-5 top-3 h-7 w-7 text-[#AE1E27]" onClick={closeModal}></XMarkIcon>
                   <div className="m-auto mt-6 aspect-square w-64">
-                    <img src={imageURL} className="h-full w-full"></img>
+                    <motion.img
+                      initial={{ scale: 0.8 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: 'keyframes', duration: 0.5 }}
+                      src={imageURL}
+                      className="h-full w-full"
+                    ></motion.img>
                   </div>
                   <div className="mt-2">
                     <h2 className="pb-2 text-center text-xl">{title}</h2>

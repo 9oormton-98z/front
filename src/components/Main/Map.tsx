@@ -42,6 +42,9 @@ export default function MapContainer({
             image: markerImage,
           });
           window.kakao.maps.event.addListener(marker, 'click', () => {
+            const latlng = new window.kakao.maps.LatLng(elem.latitude, elem.longitude);
+            map.panTo(latlng);
+            map.setZoomable(latlng);
             setPlace(elem.placeId);
           });
         });

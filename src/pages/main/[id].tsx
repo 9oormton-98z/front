@@ -4,6 +4,7 @@ import StampModal from '@/components/Main/StampModal';
 import Header from '@/components/shared/Header';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
   if (lat1 == lat2 && lon1 == lon2) return 0;
@@ -112,9 +113,30 @@ function Page() {
         ></StampModal>
       )}
       <section className="px-12">
-        <h3 className="w-full rounded-md border border-gray-300 py-2 text-center">{serverData?.name}</h3>
-        <p className="mt-2 w-full rounded-md border border-gray-300 py-2 px-4 text-center">{serverData?.address}</p>
-        <p className="mt-4 w-full rounded-md border border-gray-300 py-2 px-4 text-center">{serverData?.description}</p>
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0, duration: 0.5 }}
+          className="w-full rounded-md border border-gray-300 py-2 text-center"
+        >
+          {serverData?.name}
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="mt-2 w-full rounded-md border border-gray-300 py-2 px-4 text-center"
+        >
+          {serverData?.address}
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="mt-4 w-full rounded-md border border-gray-300 py-2 px-4 text-center"
+        >
+          {serverData?.description}
+        </motion.p>
       </section>
     </div>
   );

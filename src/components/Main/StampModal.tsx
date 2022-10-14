@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import cls from '@/utils/cls';
+import { motion } from 'framer-motion';
 
 interface StampModalProps {
   visited: boolean;
@@ -44,7 +45,17 @@ export default function StampModal({ closeModal, innerText, imageURL, visited, o
                 <Dialog.Panel className="relative flex w-full max-w-md transform flex-col items-center overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <XMarkIcon className="absolute right-5 top-3 h-7 w-7 text-[#AE1E27]" onClick={closeModal}></XMarkIcon>
                   <div className="m-auto mt-6 aspect-square w-64">
-                    <img src={imageURL} className="h-full w-full"></img>
+                    {visited ? (
+                      <motion.img
+                        initial={{ y: -30, opacity: 0.2 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ type: 'spring', duration: 1 }}
+                        src={imageURL}
+                        className="h-full w-full"
+                      ></motion.img>
+                    ) : (
+                      <img src={imageURL} className="h-full w-full"></img>
+                    )}
                   </div>
                   <div className="mt-2">
                     <p className="text-lg">{innerText}</p>

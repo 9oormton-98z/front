@@ -13,11 +13,13 @@
     "@heroicons/react": "^2.0.12",
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^1.1.2",
+    "framer-motion": "^7.5.3",
     "next": "12.3.1",
     "qs": "^6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.37.0"
+    "react-hook-form": "^7.37.0",
+    "react-simple-image-slider": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "18.8.4",
