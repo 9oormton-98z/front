@@ -3,10 +3,8 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <div>
-        <IntroPage></IntroPage>
-      </div>
+    <div className="relative">
+      <IntroPage></IntroPage>
     </div>
   );
 };

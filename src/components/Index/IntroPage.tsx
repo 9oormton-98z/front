@@ -30,7 +30,7 @@ export default function IntroPage() {
   const onError = (error: any) => console.log(error);
 
   return (
-    <div className="h-screen w-screen flex-col bg-white pt-72 text-black">
+    <div className="h-screen w-full flex-col bg-white pt-72 text-black">
       <article className="flex items-center justify-center">
         <motion.div initial={{ opacity: 0.2, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <img src="/MainLogo.png" className="h-32 w-40"></img>
