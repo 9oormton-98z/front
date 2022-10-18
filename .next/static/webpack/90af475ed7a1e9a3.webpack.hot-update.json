@@ -1,1 +1,0 @@
-{"c":["webpack"],"r":["pages/index"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2FUsers%2Fcuzz%2FDocuments%2Fproject-github%2Fdark-tourism%2Fsrc%2Fpages%2Findex.tsx&page=%2F!","./node_modules/react-hook-form/dist/index.esm.mjs","./src/api/postLoginApi.ts","./src/components/Index/IntroPage.tsx","./src/pages/index.tsx"]}
